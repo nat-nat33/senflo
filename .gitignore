@@ -108,3 +108,11 @@ venv.bak/
 
 # node-modules
 node_modules
+
+config
+.vscode
+.cache-mellyybeans
+.cache-21orc4sewrw4nmyp5k3a2jusq
+venv
+app.pyc
+
