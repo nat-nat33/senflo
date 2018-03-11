@@ -541,7 +541,7 @@ nav {
 
 @media only screen and (max-width: 799px) {
   #how-it-works {
-    padding: 200px 30px 0;
+    padding: 250px 30px 0;
   }
   #how-it-works .msg-container > .msg {
     padding-left: 30px;
