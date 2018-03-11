@@ -37,7 +37,7 @@ nav{
 }
 
 #how-it-works{
-  padding: 150px 30px 50px; 
+  padding: 200px 30px 50px; 
   background:linear-gradient(to bottom right, $transparent 15%, $transparent 55%, $blue 85% );
   @include breakpoint-up(800px){
     .msg-container{
