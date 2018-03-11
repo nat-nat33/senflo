@@ -6,6 +6,10 @@ import webbrowser
 import spotipy.util as util
 from json.decoder import JSONDecodeError
 
+# FLASK
+from flask import Flask
+app = Flask(__name__)
+
 # Get the username from terminal
 username = sys.argv[1]
 
@@ -20,36 +24,22 @@ except:
 spotifyObject = spotipy.Spotify(auth=token)
 
 user = spotifyObject.current_user()
+displayName = user['display_name'] or user['id']
 
-displayName = user['display_name']
+# Terminal Command Input
+searchQuery = input("Enter Artist Name: ")
 
-while True:
 
-    print()
-    print(">>> Welcome to Spotify!" + displayName + "!")
-    print()
-    print("0 - Search for an artist")
-    print("1 - Exit")
-    print()
-    choice = input("Your choice: ")
+@app.route("/")
+def index():
+    searchResults = spotifyObject.search(searchQuery, 1, 0, "track")
+    tracks = searchResults['tracks']['items'][0]
+    trackStr = tracks['preview_url']
+    return trackStr
 
-    # Search for the artist
-    if choice == "0":
-        print()
-        searchQuery = input("Ok, what's their name?: ")
-        print()
 
-        # Get search results
-        searchResults = spotifyObject.search(searchQuery, 1, 0, "track")
-        # print(json.dumps(searchResults, sort_keys=True, indent=4))
-
-        tracks = searchResults['tracks']['items'][0]
-        print(json.dumps(tracks, sort_keys=True, indent=4))
-        webbrowser.open(tracks['preview_url'])
-
-    # End the program
-    if choice == "1":
-        break
+if __name__ == "__main__":
+    app.run(debug=True)
 
 # Below will print out json data we can read
 # print(json.dumps(VARIABLE, sort_keys=True, indent=4))
