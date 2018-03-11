@@ -20,5 +20,8 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0"
   }
 }
