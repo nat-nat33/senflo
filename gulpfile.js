@@ -3,7 +3,7 @@ sass = require('gulp-sass'),
 concat = require('gulp-concat');
 
 // SASS TASK & VARIABLES
-var sassInput = "./build/sass/**/*.scss",
+var sassInput = "./build-app/sass/**/*.scss",
 sassOutput = "./src/css",
 sassOptions = {
   errToConsole: true,
@@ -18,7 +18,7 @@ gulp.task('buildSass', function(){
 });
 
 // JS TASKS & VARIABLES
-var jsInput = "./build/js/**/*.js",
+var jsInput = "./build-app/js/**/*.js",
 jsOutput = "./src/js";
 
 gulp.task('buildJs', function(){
