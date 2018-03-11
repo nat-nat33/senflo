@@ -43,6 +43,9 @@ nav > .column-container{
 
 .msg-container{
   flex: 4 4 0px;
+  @include breakpoint-down(799px){
+    flex: 0 0 100%;
+  }
 }
 
 .company-logo{
@@ -50,4 +53,14 @@ nav > .column-container{
     width:100%
   }
   flex: 0 0 100px;
+}
+
+footer{
+  > h1, h2{
+    text-align: center;
+    margin: 20px 0 20px;
+  }
+  > .column-container{
+    justify-content: space-between;
+  }
 }
