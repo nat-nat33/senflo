@@ -1,5 +1,20 @@
+@mixin breakpoint-down($width){
+  $max: "only screen and (max-width: $width)";
+  @media #{$max}{
+    @content;
+  }
+}
+
+@mixin breakpoint-up($width){
+  $min: "only screen and (min-width: $width)";
+  @media #{$min}{
+    @content;
+  }
+}
+
 .column-container{
   display: flex;
+  // @include breakpoint-down()
 }
 
 nav.column-container{

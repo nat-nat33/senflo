@@ -3,7 +3,7 @@
   margin: auto;
 }
 nav{
-  padding: 20px 10px;
+  padding: 20px;
 }
 
 .menu{
@@ -29,22 +29,39 @@ nav{
 }
 
 #how-it-works{
-  padding: 100px 10px 50px; 
+  padding: 100px 30px 50px; 
   background:linear-gradient(to bottom right, $transparent 15%, $transparent 55%, $blue 85% );
-
-  .msg-container{
-    > .msg{
-      padding-left: 100px;
+  @include breakpoint-up(800px){
+    .msg-container{
+      > .msg{
+        padding-left: 100px;
+      }
+    }
+  }
+  @include breakpoint-down(799px){
+    .msg-container{
+      > .msg{
+        padding-left: 30px;
+      }
     }
   }
 }
 
 #tutorial{
-  padding: 100px 10px 50px;
+  padding: 100px 30px 50px;
   background:linear-gradient(to top left, $blue 65%, $transparent 95%); 
-  .msg-container{
-    > .msg{
-      padding-right: 100px;
+  @include breakpoint-up(800px){
+    .msg-container{
+      > .msg{
+        padding-right: 100px;
+      }
+    }
+  }
+  @include breakpoint-down(799px){
+    .msg-container{
+      > .msg{
+        padding-right: 30px;
+      }
     }
   }
 }
@@ -54,11 +71,20 @@ nav{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  padding: 100px 10px 50px;
+  padding: 100px 30px 50px;
 
-  .msg-container{
-    > .msg{
-      padding-left: 100px;
+  @include breakpoint-up(800px){
+    .msg-container{
+      > .msg{
+        padding-left: 100px;
+      }
+    }
+  }
+  @include breakpoint-down(799px){
+    .msg-container{
+      > .msg{
+        padding-left: 30px;
+      }
     }
   }
 }
