@@ -14,10 +14,12 @@
 
 .column-container{
   display: flex;
-  // @include breakpoint-down()
+  @include breakpoint-down(799px){
+    flex-flow: row wrap;
+  }
 }
 
-nav.column-container{
+nav > .column-container{
   justify-content: space-between;
 }
 .logo-container{
@@ -34,8 +36,14 @@ nav.column-container{
 
 .one-column{
   flex: 2 2 0px;
+  @include breakpoint-down(799px){
+    flex: 0 0 100%;
+  }
 }
 
 .msg-container{
   flex: 4 4 0px;
+  @include breakpoint-down(799px){
+    flex: 0 0 100%;
+  }
 }
