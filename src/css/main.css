@@ -425,10 +425,15 @@ p {
 
 .column-container {
   display: flex;
-  justify-content: space-around;
 }
 
-nav.column-container {
+@media only screen and (max-width: 799px) {
+  .column-container {
+    flex-flow: row wrap;
+  }
+}
+
+nav > .column-container {
   justify-content: space-between;
 }
 
@@ -448,6 +453,12 @@ nav.column-container {
   flex: 2 2 0px;
 }
 
+@media only screen and (max-width: 799px) {
+  .one-column {
+    flex: 0 0 100%;
+  }
+}
+
 .msg-container {
   flex: 4 4 0px;
 }
@@ -460,13 +471,23 @@ nav.column-container {
   width: 100%;
 }
 
+.app-wrapper {
+  position: relative;
+}
+
 .wrapper {
   max-width: 900px;
   margin: auto;
 }
 
 nav {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
   padding: 20px;
+  top: 0;
+  left: 0;
+  background-color: #153554;
 }
 
 .menu ul {
@@ -493,7 +514,7 @@ nav {
 }
 
 #how-it-works {
-  padding: 100px 30px 50px;
+  padding: 200px 30px 50px;
   background: linear-gradient(to bottom right, transparent 15%, transparent 55%, #1C698D 85%);
 }
 
@@ -504,14 +525,25 @@ nav {
 }
 
 @media only screen and (max-width: 799px) {
+  #how-it-works {
+    padding: 200px 30px 0;
+  }
   #how-it-works .msg-container > .msg {
     padding-left: 30px;
+    padding-top: 50px;
   }
 }
 
 #tutorial {
-  padding: 100px 30px 50px;
+  padding: 100px 30px 150px;
   background: linear-gradient(to top left, #1C698D 65%, transparent 95%);
+}
+
+#tutorial img {
+  width: 100%;
+  margin-top: 50px;
+  border: 5px solid #2CA58F;
+  border-radius: 20px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -521,8 +553,11 @@ nav {
 }
 
 @media only screen and (max-width: 799px) {
+  #tutorial {
+    padding: 0 30px 200px;
+  }
   #tutorial .msg-container > .msg {
-    padding-right: 30px;
+    padding-left: 30px;
   }
 }
 
@@ -541,6 +576,10 @@ nav {
 }
 
 @media only screen and (max-width: 799px) {
+  #features > h1 {
+    margin-bottom: 40px;
+    text-align: center;
+  }
   #features .msg-container > .msg {
     padding-left: 30px;
   }
@@ -548,7 +587,7 @@ nav {
 
 .app-container {
   position: relative;
-  width: 265px;
+  width: 220px;
   height: 500px;
   margin: auto;
   background-image: url("../assets/mini-demo-bg.png");
@@ -558,21 +597,33 @@ nav {
   box-shadow: 0 1px 9px #f1f1f1;
 }
 
+.app-container .demo {
+  position: absolute;
+  top: -200px;
+  left: -85px;
+  transform: scale(0.75);
+}
+
+@media only screen and (max-width: 799px) {
+  .app-container .demo {
+    top: -150px;
+  }
+}
+
 .app-container .app {
   text-align: center;
 }
 
 .app-container .app > h1 {
-  margin-top: 45%;
+  margin-top: 50%;
   margin-bottom: 100px;
-  font-size: 3em;
   line-height: 1;
 }
 
 .app-container .icon-container {
   position: absolute;
   top: -50px;
-  left: 35%;
+  left: 30%;
   width: 100px;
   height: 100px;
   background-image: url("../assets/senflo_logo.png");
@@ -598,6 +649,12 @@ nav {
   background-position: center;
 }
 
+@media only screen and (max-width: 799px) {
+  .capture {
+    margin-bottom: 50px;
+  }
+}
+
 .check {
   width: 100px;
   height: 100px;
@@ -606,4 +663,10 @@ nav {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media only screen and (max-width: 799px) {
+  .check {
+    margin-bottom: 50px;
+  }
 }
