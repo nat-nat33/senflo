@@ -29,11 +29,95 @@ nav{
 }
 
 #how-it-works{
-  padding: 50px 10px 30px; 
+  padding: 100px 10px 50px; 
   background:linear-gradient(to bottom right, $transparent 15%, $transparent 55%, $blue 85% );
+
+  .msg-container{
+    > .msg{
+      padding-left: 100px;
+    }
+  }
 }
 
 #tutorial{
-  padding: 50px 10px 30px;
-  background:linear-gradient(to top left, $blue 70%, $transparent 100%); 
+  padding: 100px 10px 50px;
+  background:linear-gradient(to top left, $blue 65%, $transparent 95%); 
+  .msg-container{
+    > .msg{
+      padding-right: 100px;
+    }
+  }
+}
+
+#features{
+  background-image: url($feature_bg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 100px 10px 50px;
+
+  .msg-container{
+    > .msg{
+      padding-left: 100px;
+    }
+  }
+}
+
+.app-container{
+  position: relative;
+  width: 265px;
+  height:500px;
+  margin: auto;
+  background-image: url($mini_app_bg);
+  border: $transparent 1px solid;
+  border-radius: 20px;
+  padding: 0 20px 10px;
+  box-shadow: 0 1px 9px $white;
+  .app{
+    text-align: center;
+    > h1{
+      margin-top: 45%;
+      margin-bottom: 100px;
+      font-size: 3em;
+      line-height: 1;
+    }
+  }
+  .icon-container{
+    position: absolute;
+    top:-50px; left:35%;
+    width:100px;
+    height: 100px;
+    background-image: url($icon);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.msg-container{
+  > .msg{
+    margin-bottom: 50px;
+    > p{
+      font-weight: 500;
+    }
+  }
+}
+
+.capture{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-image: url('../assets/capture.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.check{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-image: url('../assets/check.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }

@@ -398,7 +398,6 @@ body {
   font-family: "Hind Vadodara", sans-serif;
   color: #f1f1f1;
   font-size: 16px;
-  font-weight: 500;
   background-color: #153554;
 }
 
@@ -416,6 +415,7 @@ h1, h2 {
   font-weight: 300;
   margin: 0;
   padding: 0;
+  letter-spacing: 2px;
 }
 
 p {
@@ -484,11 +484,93 @@ nav {
 }
 
 #how-it-works {
-  padding: 50px 10px 30px;
+  padding: 100px 10px 50px;
   background: linear-gradient(to bottom right, transparent 15%, transparent 55%, #1C698D 85%);
 }
 
+#how-it-works .msg-container > .msg {
+  padding-left: 100px;
+}
+
 #tutorial {
-  padding: 50px 10px 30px;
-  background: linear-gradient(to top left, #1C698D 70%, transparent 100%);
+  padding: 100px 10px 50px;
+  background: linear-gradient(to top left, #1C698D 65%, transparent 95%);
+}
+
+#tutorial .msg-container > .msg {
+  padding-right: 100px;
+}
+
+#features {
+  background-image: url("../assets/features-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 100px 10px 50px;
+}
+
+#features .msg-container > .msg {
+  padding-left: 100px;
+}
+
+.app-container {
+  position: relative;
+  width: 265px;
+  height: 500px;
+  margin: auto;
+  background-image: url("../assets/mini-demo-bg.png");
+  border: transparent 1px solid;
+  border-radius: 20px;
+  padding: 0 20px 10px;
+  box-shadow: 0 1px 9px #f1f1f1;
+}
+
+.app-container .app {
+  text-align: center;
+}
+
+.app-container .app > h1 {
+  margin-top: 45%;
+  margin-bottom: 100px;
+  font-size: 3em;
+  line-height: 1;
+}
+
+.app-container .icon-container {
+  position: absolute;
+  top: -50px;
+  left: 35%;
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/senflo_logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.msg-container > .msg {
+  margin-bottom: 50px;
+}
+
+.msg-container > .msg > p {
+  font-weight: 500;
+}
+
+.capture {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-image: url("../assets/capture.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.check {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-image: url("../assets/check.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }

@@ -7,9 +7,10 @@ $blue: #1C698D;
 $transparent: rgba(0,0,0,0);
 $dark_blue: #153554;
 
-$icon_img: '../assets/senflo_logo.png';
-$feature_bg: '../assets/features-background-1.png';
+$icon: '../assets/senflo_logo.png';
+$feature_bg: '../assets/features-bg.png';
 $logo: '../assets/senflo-logo-whitebg.png';
+$mini_app_bg: '../assets/mini-demo-bg.png';
 
 @import url('https://fonts.googleapis.com/css?family=Hind+Vadodara:300,400,500,600,700');
 $font: 'Hind Vadodara', sans-serif;
@@ -18,7 +19,7 @@ body{
   font-family: $font;
   color: $white;
   font-size: 16px;
-  font-weight: 500;
+  // font-weight: 500;
   background-color: $dark_blue;
 }
 
@@ -36,6 +37,7 @@ h1, h2{
   font-weight: 300;
   margin: 0;
   padding: 0;
+  letter-spacing: 2px;
 }
 
 p{
