@@ -43,7 +43,11 @@ nav > .column-container{
 
 .msg-container{
   flex: 4 4 0px;
-  @include breakpoint-down(799px){
-    flex: 0 0 100%;
+}
+
+.company-logo{
+  img{
+    width:100%
   }
+  flex: 0 0 100px;
 }

@@ -463,10 +463,12 @@ nav > .column-container {
   flex: 4 4 0px;
 }
 
-@media only screen and (max-width: 799px) {
-  .msg-container {
-    flex: 0 0 100%;
-  }
+.company-logo {
+  flex: 0 0 100px;
+}
+
+.company-logo img {
+  width: 100%;
 }
 
 .app-wrapper {
