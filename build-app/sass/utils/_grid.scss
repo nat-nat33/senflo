@@ -1,0 +1,26 @@
+.column-container{
+  display: flex;
+}
+
+nav.column-container{
+  justify-content: space-between;
+}
+.logo-container{
+  flex: 0 0 215px;
+  background-image: url($logo);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 78px;
+}
+
+.menu{
+  flex: 0 0 400px;
+}
+
+.one-column{
+  flex: 2 2 0px;
+}
+
+.msg-container{
+  flex: 4 4 0px;
+}

@@ -1,0 +1,49 @@
+@import "utils/normalize";
+// Colors
+$green: #2CA58F;
+$white: #f1f1f1;
+$black: #000;
+$blue: #1C698D;
+$transparent: rgba(0,0,0,0);
+$dark_blue: #153554;
+
+$icon_img: '../assets/senflo_logo.png';
+$feature_bg: '../assets/features-background-1.png';
+$logo: '../assets/senflo-logo-white.png';
+
+@import url('https://fonts.googleapis.com/css?family=Hind+Vadodara:300,400,500,600,700');
+$font: 'Hind Vadodara', sans-serif;
+
+body{
+  font-family: $font;
+  color: $white;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: $dark_blue;
+}
+
+h1{
+  font-size: 2em;
+}
+
+h2{
+  font-size: 1.5em;
+}
+
+h1, h2{
+  text-shadow: 1px 3px 5px $black;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+@import 
+  "utils/grid",
+  "landing/root",
+  "landing/message";

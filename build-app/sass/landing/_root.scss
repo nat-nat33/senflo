@@ -1,0 +1,39 @@
+.wrapper{
+  max-width: 900px;
+  margin: auto;
+}
+nav{
+  padding: 20px 10px;
+}
+
+.menu{
+  ul{
+    padding: 0;
+  }
+  li {
+    flex: 1 1 0px;
+    list-style-type: none;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 10px;
+    a{
+      display: inline-block;
+      color: $white;
+      text-decoration: none;
+      &:hover{
+        color: #ccc;
+      }
+    }
+  }
+}
+
+#how-it-works{
+  padding: 50px 10px 30px; 
+  background:linear-gradient(to bottom right, $transparent 15%, $transparent 55%, $blue 85% );
+}
+
+#tutorial{
+  padding: 50px 10px 30px;
+  background:linear-gradient(to top left, $blue 70%, $transparent 100%); 
+}
